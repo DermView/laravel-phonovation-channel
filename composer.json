@@ -1,0 +1,48 @@
+{
+    "name": "dermview/laravel-phonovation-channel",
+    "description": "Phonovation notification channel for Laravel.",
+    "homepage": "https://github.com/DermView/laravel-phonovation-channel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel Smirnov",
+            "email": "psmirnov@dermview.ie",
+            "homepage": "https://github.com/psmirnov-dermview",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "guzzlehttp/guzzle": "^6.2.1 || ^7.0",
+        "illuminate/notifications": "^9.0|^10.0",
+        "illuminate/support": "^9.0|^10.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.5.1",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\Phonovation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\Phonovation\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:coverage": "phpunit --coverage-text --coverage-clover=coverage.clover"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PhonovationServiceProvider"
+            ]
+        }
+    }
+}
